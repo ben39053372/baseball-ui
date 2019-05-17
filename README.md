@@ -2,16 +2,16 @@
 
 ![image](https://github.com/ben39053372/baseball-ui/blob/master/baseball.PNG)
 
-'''
+```
 App
-'''
+
 |--Header
 |--Main
    |--TeamSelector
    |  |--Team
    |--Predict
       |--Result
-'''
+```
 
 ## Project setup
 ```
