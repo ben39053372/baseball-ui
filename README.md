@@ -5,12 +5,12 @@
 ```
 App
 
-|--Header
-|--Main
-   |--TeamSelector
-   |  |--Team
-   |--Predict
-      |--Result
+|--Header(紅)
+|--Main(黃)
+   |--TeamSelector(綠)
+   |  |--Team(藍)
+   |--Predict(紫)
+      |--Result(還沒有用到)
 ```
 
 ## Project setup
