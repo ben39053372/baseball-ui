@@ -1,8 +1,8 @@
 <template>
   <div class='slide'>
     <div>
-      <p>{{ NameList[Index] }}</p>
-      <img :src="List[Index]">
+      <p class='team'>{{ NameList[Index] }}</p>
+      <img class='team-img' :src="List[Index]">
     </div>
 
     <a class="prev" v-on:click="left">&#10094;</a>
@@ -57,20 +57,27 @@ export default {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: rgba(255,255,255,0.4);
 }
 .slide {
-  max-width: 1000px;
+  max-width: 800px;
   position: relative;
   margin: auto;
 }
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  background-color: rgba(255,255,255,0.4);
 }
 
 .prev {
   left: 0;
   border-radius: 3px 0 0 3px;
+  background-color: rgba(255,255,255,0.4);
+}
+
+.team {
+  font-size: 35px;
 }
 
 </style>

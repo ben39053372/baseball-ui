@@ -11,10 +11,11 @@
   }
 </script>
 
-<style>
-.title{
+<style scoped>
+  .title{
     font-size:80px;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #fcc40ef5;
-}
+    -webkit-text-stroke: 2px #cca935f5;
+    background-color: rgba(255,255,255,0.4);
+    margin:30px 0px;
+  }
 </style>
