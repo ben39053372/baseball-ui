@@ -1,5 +1,7 @@
 # baseball
 
+![image](https://github.com/ben39053372/baseball-ui/blob/master/baseball.PNG)
+
 ## Project setup
 ```
 npm install
