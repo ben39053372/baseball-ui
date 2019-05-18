@@ -1,12 +1,12 @@
 <template>
   <div class='slide'>
     <div>
-      <p class='team'>{{ NameList[Index] }}</p>
-      <img class='team-img' :src="List[Index]">
+      <p class='team'>{{ NameList[HomeIndex] }}</p>
+      <img class='team-img' :src="ImgList[HomeIndex]">
     </div>
 
-    <a class="prev" v-on:click="left">&#10094;</a>
-    <a class="next" v-on:click="right">&#10095;</a>
+    <a class="prev" v-on:click="HomeLeftAction">&#10094;</a>
+    <a class="next" v-on:click="HomeRightAction">&#10095;</a>
   </div>
 </template>
 
@@ -15,33 +15,26 @@ import lamigo from "../../static/lamigo.png";
 import uni_lions from "../../static/uni-lions.png";
 import Guardians from "../../static/Guardians.png";
 import CTB from "../../static/ChinaTrust_Brothers.png";
-
+import {mapState, mapActions} from 'vuex'
 export default {
   data() {
     return {
-      Index: 1,
-      List: [lamigo, uni_lions, Guardians, CTB],
+      ImgList: [lamigo, uni_lions, Guardians, CTB],
       NameList: ["LAMIGO桃猿", "統一7-ELEVEn 獅", "富邦悍將", "中信兄弟"]
     };
   },
   methods: {
-    left() {
-      if (this.Index == 0) {
-        this.Index = 3;
-      } else {
-        this.Index -= 1;
-      }
-      console.log("left");
-    },
-    right() {
-      if (this.Index == 3) {
-        this.Index = 0;
-      } else {
-        this.Index += 1;
-      }
-      console.log("right");
-    }
-  }
+    ...mapActions([
+      'HomeLeftAction',
+      'HomeRightAction'
+    ])
+  },
+  computed:{
+    ...mapState([
+      'HomeIndex'
+    ])
+  },
+  
 };
 </script>
 

@@ -2,17 +2,16 @@
   <div>
     <TeamSelector/>
     <Predict/>
-    <Result/>
   </div>
 </template>
 
 <script>
   import TeamSelector from './TeamSelector'
-  import Predict from './predict'
-  import Result from './Result'
+  import Predict from './Predict'
+  //import Result from './Result'
   export default {
     components:{
-      TeamSelector,Predict,Result
+      TeamSelector,Predict
     }
   };
 </script>
