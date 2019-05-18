@@ -3,6 +3,9 @@
     <div class="col">
       <h1>主隊</h1>
       <Team/>
+      <div>
+        <pitcher/>
+      </div>
     </div>
     <div class="col">
       <h2 class="vs">vs</h2>
@@ -10,15 +13,19 @@
     <div class="col">
       <h1>客隊</h1>
       <Team/>
+      <div>
+        <pitcher/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Team from "./Team";
+import Team from "./Team"
+import pitcher from "./pitcher"
 export default {
   components: {
-    Team
+    Team,pitcher
   }
 };
 </script>
@@ -27,6 +34,7 @@ export default {
 <style scoped>
 .vs{
   padding-top:50% 
+  font-family: fantasy;
 }
 .row {
   background-color: rgba(255, 255, 255, 0.7);
@@ -34,6 +42,10 @@ export default {
 }
 
 .col {
+  background: rgba(0%,10%,20%,0.6);
+  background-size: 110%;
+  color:wheat;
+  height: 500px;
   float: left;
   width: 33%;
 }
