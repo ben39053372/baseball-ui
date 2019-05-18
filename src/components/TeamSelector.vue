@@ -25,6 +25,9 @@ export default {
 
 
 <style scoped>
+.vs{
+  padding-top:50% 
+}
 .row {
   background-color: rgba(255, 255, 255, 0.7);
   height: 460px;
