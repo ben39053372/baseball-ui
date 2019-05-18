@@ -1,8 +1,8 @@
 <template>
   <div class='slide'>
     <div>
-      <p class='team'>{{ NameList[Index] }}</p>
-      <img class='team-img' :src="List[Index]">
+      <p>{{ NameList[Index] }}</p>
+      <img :src="List[Index]">
     </div>
 
     <a class="prev" v-on:click="left">&#10094;</a>
@@ -11,38 +11,38 @@
 </template>
 
 <script>
-import lamigo from "../../static/lamigo.png";
-import uni_lions from "../../static/uni-lions.png";
-import Guardians from "../../static/Guardians.png";
-import CTB from "../../static/ChinaTrust_Brothers.png";
+import lamigo from '../../static/lamigo.png'
+import unilions from '../../static/uni-lions.png'
+import Guardians from '../../static/Guardians.png'
+import CTB from '../../static/ChinaTrust_Brothers.png'
 
 export default {
-  data() {
+  data () {
     return {
       Index: 1,
-      List: [lamigo, uni_lions, Guardians, CTB],
-      NameList: ["LAMIGO桃猿", "統一7-ELEVEn 獅", "富邦悍將", "中信兄弟"]
-    };
+      List: [lamigo, unilions, Guardians, CTB],
+      NameList: ['LAMIGO桃猿', '統一7-ELEVEn 獅', '富邦悍將', '中信兄弟']
+    }
   },
   methods: {
-    left() {
-      if (this.Index == 0) {
-        this.Index = 3;
+    left () {
+      if (this.Index === 0) {
+        this.Index = 3
       } else {
-        this.Index -= 1;
+        this.Index -= 1
       }
-      console.log("left");
+      console.log('left')
     },
-    right() {
-      if (this.Index == 3) {
-        this.Index = 0;
+    right () {
+      if (this.Index === 3) {
+        this.Index = 0
       } else {
-        this.Index += 1;
+        this.Index += 1
       }
-      console.log("right");
+      console.log('right')
     }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -52,32 +52,26 @@ export default {
   top:0;
   width: auto;
   padding: 16px;
-  color: black;
+  color: rgb(184, 158, 13);
   font-size: 25px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: rgba(255,255,255,0.4);
 }
 .slide {
-  max-width: 800px;
+  font-size: 20px;
+  max-width: 1000px;
   position: relative;
   margin: auto;
 }
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-  background-color: rgba(255,255,255,0.4);
 }
 
 .prev {
   left: 0;
   border-radius: 3px 0 0 3px;
-  background-color: rgba(255,255,255,0.4);
-}
-
-.team {
-  font-size: 35px;
 }
 
 </style>
