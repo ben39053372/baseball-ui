@@ -13,6 +13,10 @@ App
       |--Result(還沒有用到)
 ```
 
+## Vuex
+
+![image](https://github.com/ben39053372/baseball-ui/blob/master/1485575347_47001.png)
+
 ## Project setup
 ```
 npm install
