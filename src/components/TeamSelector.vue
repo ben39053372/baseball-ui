@@ -47,10 +47,11 @@ export default {
 }
 
 .col {
+  padding: 0 0;
   background-size: 110%;
   height: 460px;
   float: left;
-  width: 33.333%;
+  width: 33.3333%;
   color: white; 
 }
 

@@ -56,7 +56,7 @@ export default {
 .slide {
   max-width: 800px;
   position: relative;
-  margin: auto;
+  margin: 0 10%;
 }
 .next {
   right: 0;
