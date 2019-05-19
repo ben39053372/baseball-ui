@@ -59,20 +59,26 @@ const actions = {
             fetch(url, {
                 method: 'POST',
                 body: formData,
-                headers: 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW',
-                mode: 'no-cors',
             })
-                .catch(error => alert("伺服器錯誤:",error))
-                //.then(res => res=res.json())
-                .then(data => {
-                    //更新state
-                    alert(data);
-                    context.commit('pushScoreA', data.scoreA);
-                    context.commit('pushScoreB', data.scoreB);
-                    //checked commit is ok!
-                    //context.commit('pushScoreA', 1);
-                    //context.commit('pushScoreB', 2);
+                .catch(error => {
+                    // eslint-disable-next-line
+                    console.error("伺服器錯誤:",error)
+                    alert(error)
                 })
+                .then(res => res.json())
+                
+                
+                .then(res => {
+                    // eslint-disable-next-line
+                    console.log('succes',res)
+                    return res
+                })
+                .then(res => {
+                    context.commit('pushScoreA', res.scoreA);
+                    context.commit('pushScoreB', res.scoreB);
+                    alert("預測成功!");
+                })
+                
         }
 
 
