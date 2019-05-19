@@ -36,9 +36,9 @@ export default {
 
 <style scoped>
 .vs {
-  margin: 50% 0;
+  margin: 40% 0;
   font-family: fantasy;
-  color: #977e2bf5;
+  color: #ece377;
   font-size: 60px;
 }
 .row {
@@ -48,7 +48,7 @@ export default {
 
 .col {
   background-size: 110%;
-  height: 500px;
+  height: 460px;
   float: left;
   width: 33.333%;
   color: white; 

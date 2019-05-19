@@ -13,6 +13,7 @@ const state = {
       ],
     //隊伍名稱List
     NameList: ["LAMIGO桃猿", "統一7-ELEVEn 獅", "富邦悍將", "中信兄弟"],
+    postNameList: ["Lamigo","統一","富邦","中信兄弟"],
     //圖片連結List
     ImgList: [lamigo, uni_lions, Guardians, CTB],
     //主隊

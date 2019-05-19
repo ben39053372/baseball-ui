@@ -2,28 +2,29 @@
   <div>
     <div class="row">
       <div class="col">
-        <p>預測結果</p>
+        <p>預測分數: {{scoreA}}分</p>
       </div>
       <div class="col">
         <button @click="postData">預測</button>
       </div>
       <div class="col">
-        <p>預測結果</p>
+        <p>預測分數 {{scoreB}}分</p>
       </div>
     </div>
-    <Result/>
   </div>
 </template>
 
 <script>
-import Result from "./Result";
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 export default {
-  components: {
-    Result
-  },
   methods:{
     ...mapActions(['postData'])
+  },
+  computed:{
+    ...mapState([
+      'scoreA',
+      'scoreB',
+    ])
   }
 
 };
@@ -33,6 +34,7 @@ export default {
 
 <style scoped>
 button {
+  margin: 6% 0;
   width: 100px;
   height: 50px;
   border: 2px solid;
@@ -42,7 +44,6 @@ button {
   cursor: pointer;
   font-size: 24px;
   font-weight: bold;
-  margin: 0 auto;
 }
 
 .row {

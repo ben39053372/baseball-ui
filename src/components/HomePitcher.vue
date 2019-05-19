@@ -11,7 +11,6 @@
       {{ item.player }}
       </Option>
     </Select>
-    <p>{{AwayPitcher}}</p>
   </div>
 </template>
 
